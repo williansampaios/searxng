@@ -16,10 +16,7 @@ Environment variables:
   MORTY_KEY     settings.yml : result_proxy.key
   BIND_ADDRESS  uwsgi bind to the specified TCP socket using HTTP protocol.
                 Default value: ${DEFAULT_BIND_ADDRESS}
-Volume:
-  /etc/searxng  the docker entry point copies settings.yml and uwsgi.ini in
-                this directory (see the -f command line option)"
-
+                
 EOF
 }
 
