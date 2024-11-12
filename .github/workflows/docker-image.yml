@@ -43,7 +43,7 @@ jobs:
           context: .
           push: true
           tags: |
-            chpeerapat/your_image_name:latest
+            chpeerapat/searxng:latest
             ghcr.io/${{ github.repository }}/searxng:latest
 
       # Optional Step: Clean up Docker images after build
