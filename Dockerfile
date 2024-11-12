@@ -13,8 +13,8 @@ ENV INSTANCE_NAME=searxng \
     BASE_URL= \
     MORTY_KEY= \
     MORTY_URL= \
-    SEARXNG_SETTINGS_PATH=/etc/searxng/settings.yml \
-    UWSGI_SETTINGS_PATH=/etc/searxng/uwsgi.ini \
+    SEARXNG_SETTINGS_PATH= \
+    UWSGI_SETTINGS_PATH= \
     UWSGI_WORKERS=%k \
     UWSGI_THREADS=4
 
@@ -50,8 +50,8 @@ RUN apk add --no-cache -t build-dependencies \
 COPY --chown=searxng:searxng dockerfiles ./dockerfiles
 COPY --chown=searxng:searxng searx ./searx
 
-COPY dockerfiles/settings.yml /etc/searxng/settings.yml
-COPY dockerfiles/uwsgi.ini /etc/searxng/uwsgi.ini
+COPY ./settings.yml /etc/searxng/settings.yml
+COPY ./dockerfiles/uwsgi.ini /etc/searxng/uwsgi.ini
 
 ARG TIMESTAMP_SETTINGS=0
 ARG TIMESTAMP_UWSGI=0
